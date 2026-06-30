@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino Bringa — Backend Developer</title>
+
+  <!-- Font Awesome para iconos (GitHub, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts para tipografía limpia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">GB</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <a href="https://github.com/GinoBringa" target="_blank" rel="noopener noreferrer" class="nav-github" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ====== HERO / INICIO ====== -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Gino Bringa</h1>
+      <h2 class="hero-title">Backend Developer</h2>
+      <p class="hero-description">
+        Backend developer focused on building robust, clean and scalable systems.
+        Passionate about software architecture and solving complex problems with well-written code.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="https://github.com/GinoBringa" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SOBRE MÍ ====== -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a backend developer with experience designing and building APIs,
+            modular architectures and distributed systems. My day-to-day revolves
+            around Java, Spring Boot, relational databases and clean code principles.
+          </p>
+          <p>
+            I enjoy understanding the problem before writing a single line of code,
+            and I firmly believe that good architecture is the difference between
+            a painful project to maintain and one that's a joy to develop.
+          </p>
+          <p>
+            I'm deeply interested in learning how to handle high traffic volumes in applications —
+            exploring caching strategies, message queues, and patterns that keep
+            systems performant under load.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">+1</span>
+            <span class="stat-label">Years experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">+3</span>
+            <span class="stat-label">Personal projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">Java / Spring</span>
+            <span class="stat-label">Main stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROYECTOS ====== -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Personal Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 — Spring Security -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/imagenes/Spring%20security%20project.png" alt="Spring Security project screenshot" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Spring Security — Authentication & Authorization</h3>
+            <p class="project-description">
+              This project provides a RESTful API to manage the creation of users, roles and permissions
+              that will be required to access to the diffents endpoints. Understand how Spring Security
+              and JWT works to secure an app.
+            </p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring Security</span>
+              <span>JWT</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="https://github.com/GinoBringa/spring-security-learning-project" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 — Asteroid Report -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/imagenes/Asteroid%20report%20project.png" alt="Asteroid Report project screenshot" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Asteroid Report — Near Earth Asteroids</h3>
+            <p class="project-description">
+              This project provides the function to send emails about the near asteroids around the Earth,
+              with the objective to use the technology Spring for Apache Kafka for communicate the services.
+            </p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>NASA API</span>
+              <span>Kafka</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="https://github.com/GinoBringa/asteroid-report" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 — Microservice -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/imagenes/Microservice%20project.png" alt="Microservice project screenshot" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Microservices Architecture</h3>
+            <p class="project-description">
+              This project simulate the process of buy and restock articles of a business,
+              using the microservices architecture.
+            </p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring Cloud</span>
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+            </div>
+            <a href="https://github.com/GinoBringa/microservices-project" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Gino Bringa</p>
+      <div class="footer-links">
+        <a href="https://github.com/GinoBringa" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/ginobringa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
