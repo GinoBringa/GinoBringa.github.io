@@ -294,18 +294,26 @@ ul {
   border-top: 1px solid rgba(167, 139, 250, 0.08);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 32px;
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
   background: #111111;
   border: 1px solid rgba(167, 139, 250, 0.10);
   border-radius: 14px;
   overflow: hidden;
   transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-card--reverse {
+  flex-direction: row-reverse;
 }
 
 .project-card:hover {
@@ -314,8 +322,8 @@ ul {
 }
 
 .project-image {
-  width: 100%;
-  height: 200px;
+  flex: 0 0 45%;
+  min-height: 260px;
   overflow: hidden;
   background: #1a1a1a;
 }
@@ -324,29 +332,41 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: object-fit 0.25s ease;
+  display: block;
 }
 
 .project-card:hover .project-image img {
-  object-fit: contain;
+  opacity: 0.85;
 }
 
 .project-info {
-  padding: 24px;
+  flex: 1;
+  padding: 32px;
 }
 
 .project-title {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
-.project-description {
+/* Bullet points */
+.project-bullets {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.project-bullets li {
   font-size: 0.92rem;
   color: #999;
   line-height: 1.7;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
+}
+
+.project-bullets li::marker {
+  color: #a78bfa;
 }
 
 .project-tech {
@@ -419,8 +439,19 @@ ul {
     font-size: 0.82rem;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .project-card,
+  .project-card--reverse {
+    flex-direction: column;
+  }
+
+  .project-image {
+    flex: unset;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .project-info {
+    padding: 24px;
   }
 
   .about-stats {

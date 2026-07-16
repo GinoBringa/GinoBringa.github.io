@@ -95,20 +95,21 @@
     <div class="container">
       <h2 class="section-title">Personal Projects</h2>
 
-      <div class="projects-grid">
+      <div class="projects-list">
 
-        <!-- Project 1 — Spring Security -->
+        <!-- Project 1 — Spring Security (imagen izq, texto der) -->
         <article class="project-card">
           <div class="project-image">
             <img src="assets/imagenes/Spring%20security%20project.png" alt="Spring Security project screenshot" loading="lazy" />
           </div>
           <div class="project-info">
             <h3 class="project-title">Spring Security — Authentication & Authorization</h3>
-            <p class="project-description">
-              This project provides a RESTful API to manage the creation of users, roles and permissions
-              that will be required to access to the diffents endpoints. Understand how Spring Security
-              and JWT works to secure an app.
-            </p>
+            <ul class="project-bullets">
+              <li>RESTful API for user, role, and permission management</li>
+              <li>JWT-based authentication and authorization flow</li>
+              <li>Spring Security integration to protect endpoints</li>
+              <li>PostgreSQL persistence for users and authorities</li>
+            </ul>
             <div class="project-tech">
               <span>Java</span>
               <span>Spring Boot</span>
@@ -122,17 +123,19 @@
           </div>
         </article>
 
-        <!-- Project 2 — Asteroid Report -->
-        <article class="project-card">
+        <!-- Project 2 — Asteroid Report (imagen der, texto izq) -->
+        <article class="project-card project-card--reverse">
           <div class="project-image">
             <img src="assets/imagenes/Asteroid%20report%20project.png" alt="Asteroid Report project screenshot" loading="lazy" />
           </div>
           <div class="project-info">
             <h3 class="project-title">Asteroid Report — Near Earth Asteroids</h3>
-            <p class="project-description">
-              This project provides the function to send emails about the near asteroids around the Earth,
-              with the objective to use the technology Spring for Apache Kafka for communicate the services.
-            </p>
+            <ul class="project-bullets">
+              <li>Automated email reports with near-Earth asteroid data</li>
+              <li>Spring for Apache Kafka for async service communication</li>
+              <li>NASA API integration for real-time asteroid tracking</li>
+              <li>PostgreSQL persistence for scheduled reports</li>
+            </ul>
             <div class="project-tech">
               <span>Java</span>
               <span>Spring Boot</span>
@@ -147,17 +150,19 @@
           </div>
         </article>
 
-        <!-- Project 3 — Microservice -->
+        <!-- Project 3 — Microservice (imagen izq, texto der) -->
         <article class="project-card">
           <div class="project-image">
             <img src="assets/imagenes/Microservice%20project.png" alt="Microservice project screenshot" loading="lazy" />
           </div>
           <div class="project-info">
             <h3 class="project-title">Microservices Architecture</h3>
-            <p class="project-description">
-              This project simulate the process of buy and restock articles of a business,
-              using the microservices architecture.
-            </p>
+            <ul class="project-bullets">
+              <li>Simulates buy and restock processes for a business</li>
+              <li>Microservices architecture with Spring Cloud</li>
+              <li>Polyglot persistence: PostgreSQL + MongoDB</li>
+              <li>Service-to-service communication with Feign clients</li>
+            </ul>
             <div class="project-tech">
               <span>Java</span>
               <span>Spring Boot</span>
