@@ -98,27 +98,28 @@
 
       <div class="projects-list">
 
-        <!-- Project 1 — Spring Security (imagen izq, texto der) -->
+        <!-- Project 1 — Weather Activities (imagen izq, texto der) -->
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/imagenes/Spring%20security%20project.png" alt="Spring Security project screenshot" loading="lazy" />
+            <!-- TODO: add project screenshot -->
           </div>
           <div class="project-info">
-            <h3 class="project-title">Spring Security — Authentication & Authorization</h3>
+            <h3 class="project-title">Weather Activities — Event-Driven Microservices</h3>
             <ul class="project-bullets">
-              <li>RESTful API for user, role, and permission management</li>
-              <li>JWT-based authentication and authorization flow</li>
-              <li>Spring Security integration to protect endpoints</li>
-              <li>PostgreSQL persistence for users and authorities</li>
+              <li>Designed a dual-microservice event-driven system with Spring Boot and RabbitMQ to decouple weather ingestion from AI recommendation generation.</li>
+              <li>Integrated OpenWeather and OpenRouter APIs via Spring Cloud OpenFeign and Spring AI to fetch real-time data and generate personalized activity suggestions.</li>
+              <li>Implemented resilient async messaging with publisher confirms, automatic retries, and exponential backoff using RabbitMQ topic exchange and Jackson serialization.</li>
+              <li>Containerized both services and RabbitMQ with Docker Compose, reducing full-stack setup to a single command with reproducible environments.</li>
             </ul>
             <div class="project-tech">
-              <span>Java</span>
+              <span>Java 21</span>
               <span>Spring Boot</span>
-              <span>Spring Security</span>
-              <span>JWT</span>
-              <span>PostgreSQL</span>
+              <span>Spring Cloud OpenFeign</span>
+              <span>Spring AI</span>
+              <span>RabbitMQ</span>
+              <span>Docker Compose</span>
             </div>
-            <a href="https://github.com/GinoBringa/spring-security-learning-project" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+            <a href="https://github.com/GinoBringa/weather-activities" target="_blank" rel="noopener noreferrer" class="btn btn-small">
               <i class="fab fa-github"></i> View Code
             </a>
           </div>
@@ -130,20 +131,21 @@
             <img src="assets/imagenes/Asteroid%20report%20project.png" alt="Asteroid Report project screenshot" loading="lazy" />
           </div>
           <div class="project-info">
-            <h3 class="project-title">Asteroid Report — Near Earth Asteroids</h3>
+            <h3 class="project-title">Asteroid Report — Event-Driven Alert System</h3>
             <ul class="project-bullets">
-              <li>Automated email reports with near-Earth asteroid data</li>
-              <li>Spring for Apache Kafka for async service communication</li>
-              <li>NASA API integration for real-time asteroid tracking</li>
-              <li>PostgreSQL persistence for scheduled reports</li>
+              <li>Built a dual-microservice event-driven system with Spring Boot and Apache Kafka that fetches near-Earth asteroid data from the NASA NEO API and triggers email alerts to subscribed users.</li>
+              <li>Integrated Redis caching with custom Jackson polymorphic serialization on the NASA API client to reduce redundant external calls while maintaining data freshness.</li>
+              <li>Designed a Kafka consumer with deduplication by asteroid name and close approach date, persisting alerts to PostgreSQL via Spring Data JPA with automated email dispatch through Spring Mail and async scheduling.</li>
+              <li>Containerized the full infrastructure — Kafka, PostgreSQL, Redis, pgAdmin, and both microservices — with Docker Compose, enabling a fully reproducible multi-service environment in one command.</li>
             </ul>
             <div class="project-tech">
-              <span>Java</span>
+              <span>Java 21</span>
               <span>Spring Boot</span>
-              <span>Java Mail Sender</span>
-              <span>NASA API</span>
-              <span>Kafka</span>
+              <span>Apache Kafka</span>
+              <span>Spring Cloud OpenFeign</span>
+              <span>Redis</span>
               <span>PostgreSQL</span>
+              <span>Docker Compose</span>
             </div>
             <a href="https://github.com/GinoBringa/asteroid-report" target="_blank" rel="noopener noreferrer" class="btn btn-small">
               <i class="fab fa-github"></i> View Code
@@ -157,19 +159,22 @@
             <img src="assets/imagenes/Microservice%20project.png" alt="Microservice project screenshot" loading="lazy" />
           </div>
           <div class="project-info">
-            <h3 class="project-title">Microservices Architecture</h3>
+            <h3 class="project-title">E-Commerce — Spring Cloud Microservices</h3>
             <ul class="project-bullets">
-              <li>Simulates buy and restock processes for a business</li>
-              <li>Microservices architecture with Spring Cloud</li>
-              <li>Polyglot persistence: PostgreSQL + MongoDB</li>
-              <li>Service-to-service communication with Feign clients</li>
+              <li>Architected a full microservices platform with Spring Cloud (Eureka, Config Server, Gateway) featuring 4 business services for customer, product, cart, and auth management with polyglot persistence (MongoDB + PostgreSQL).</li>
+              <li>Implemented centralized JWT authentication at the API Gateway level using Spring Cloud Gateway (WebFlux) with a global filter that validates tokens and forwards user context to downstream services.</li>
+              <li>Integrated inter-service communication via OpenFeign between cart, customer, and product services for real-time stock validation and customer verification during purchase and restock workflows.</li>
+              <li>Containerized the full 10-service platform — including Prometheus and Grafana for monitoring — with Docker Compose, using health checks for ordered startup across the entire stack.</li>
             </ul>
             <div class="project-tech">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>Spring Cloud</span>
-              <span>PostgreSQL</span>
-              <span>MongoDB</span>
+              <span>Java 21</span>
+              <span>Spring Boot / Cloud</span>
+              <span>Eureka / Config / Gateway</span>
+              <span>JWT</span>
+              <span>OpenFeign</span>
+              <span>MongoDB / PostgreSQL</span>
+              <span>Prometheus + Grafana</span>
+              <span>Docker Compose</span>
             </div>
             <a href="https://github.com/GinoBringa/microservices-project" target="_blank" rel="noopener noreferrer" class="btn btn-small">
               <i class="fab fa-github"></i> View Code
